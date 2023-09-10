@@ -9,13 +9,13 @@
         <el-col :span="17">
             <div>
                 <el-menu :default-active="activeIndex"
-                         class="el-menu-demo"
-                         mode="horizontal"
-                         @select="handleSelect"
-                         v-for="(item, i) in funData" :index="''+i" :key="i"
+                    mode="horizontal"
+                    class="el-menu-demo"
+                    @select="handleSelect"
+                    v-for="(item, i) in funData" :index="''+i" :key="i"
                 >
                     <!-- 一级菜单 -->
-                    <el-menu-item v-if="item.path != null">
+                    <el-menu-item v-if="item.path != null" :index="''+i">
                         <router-link :to="item.path">{{item.name}}</router-link>
                     </el-menu-item>
                 </el-menu>
@@ -63,8 +63,8 @@ export default {
         handleBlob() {
             this.$alert('待整理')
         },
-        handleSelect() {
-
+        handleSelect(index) {
+            this.activeIndex = index
         },
     },
     created() {
@@ -87,10 +87,12 @@ export default {
 }
 .el-menu-item {
     font-size: 18px;
-    color: black !important;
+    /* color: black !important; */
 }
 
-.el-menu--horizontal.el-menu--horizontal {
+.el-menu--horizontal.el-menu--horizontal,
+.el-menu--horizontal > .el-menu-item.is-active,
+.el-menu--horizontal > .el-menu-item{
     border-bottom: 0px !important;
 }
 

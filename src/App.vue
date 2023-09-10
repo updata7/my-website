@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .fade-right-enter-active, .fade-right-leave-active {
   transition: all 0.5s; /* 过渡动画持续时间 */
 }

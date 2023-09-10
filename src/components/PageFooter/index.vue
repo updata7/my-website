@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <p style="font-size: 20px;"> 添加微信: <span style="color: red;">updata7</span></p>
+        <p style="font-size: 20px;"> 找我定制或合作: <span style="color: red;">updata7(微信，备注来意)</span></p>
         <p>CKJiang 版权所有 ©2023-06</p>
     </div>
 
@@ -15,16 +15,11 @@ export default {
 
 <style scoped>
 .footer {
-    position: fixed; /* 固定定位 */
-    /* 距离底部 20px */
-    bottom: 0px; 
-    left: 50%; /* 水平居中，以左边为基准 */
-    transform: translateX(-50%); /* 平移使其水平居中 */
-    width: 100%; /* 100% 宽度 */
     text-align: center; /* 文字水平居中 */
     /* 背景颜色，可根据需要调整 */
     background-color: #d3d1d1; 
-    padding: 10px; /* 内边距 */
+    /* 内边距 */
+    padding: 20px; 
     /* box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2); // 添加底部阴影 */
 }
 
