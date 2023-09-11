@@ -1,8 +1,8 @@
 <template>
     <div class="home">
-        <el-carousel :interval="3000" indicator-position="outside" height="600px">
+        <el-carousel :interval="3000" indicator-position="outside" height="700px">
             <el-carousel-item v-for="item in items" :key="item.url">
-                <el-image style="width: 100%;" :src="item.url"></el-image>
+                <el-image class="img" :src="item.url"></el-image>
             </el-carousel-item>
         </el-carousel>
         <div v-if="false">
@@ -98,10 +98,16 @@ export default {
 .home {
     text-align: center;
     width: 100%;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('@/assets/images/bg-about-me.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    // background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('@/assets/images/bg-about-me.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center center;
+    height: calc(100vh - 130px);
+    overflow: hidden;
+}
+.img {
+    width: 100%; 
+    object-fit: cover;
 }
 .card-item {
     width: 100%;

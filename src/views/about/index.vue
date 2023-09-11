@@ -51,17 +51,10 @@
 </template>
 
 <script>
-// import VueMarkdown from 'vue-markdown';
-import aboutMe from '@/docs/about-me.md'
 export default {
     name: 'About',
-    components: {
-        // VueMarkdown
-    },
     data() {
         return {
-            markdownText: aboutMe,
-            creationTime: ''
         }
     },
     created() {
@@ -73,8 +66,7 @@ export default {
 
 <style lang="scss" scoped>
 .div-item {
-    /* 在PC端应用的样式 */
-    font-family: "STKaiti", "楷体", "KaiTi", cursive;
+    font-family: "STKaiti", "楷体", "KaiTi";
     font-size: 18px;
     background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('@/assets/images/bg-about-me.png');
     background-repeat: no-repeat;
@@ -82,7 +74,7 @@ export default {
     background-position: center center;
     .title{
         text-align: center; 
-        padding-top: 10px; 
+        padding: 20px 0; 
         margin: 0px;
         font-size: 30px;
         font-weight: bold;
